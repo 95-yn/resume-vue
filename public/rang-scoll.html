@@ -1,0 +1,110 @@
+<div id="menu">
+  <ul>
+    <li id="li1"><div id="inner-text">1</div></li>
+    <li id="li2">2</li>
+    <li id="li3">3</li>
+    <li id="li4">4</li>
+    <li id="li5">5</li>
+    <li id="li6">6</li>
+    <li id="li7">7</li>
+    <li id="li8">8</li>
+  </ul>
+</div>
+<style>
+  #menu {
+    width: 226px;
+    height: 226px;
+    margin: 100px;
+    background-color: antiquewhite;
+    border: 1px solid #ccc;
+    border-radius: 114px;
+    position: fixed;
+
+    animation: spin 10s infinite linear;
+  }
+  #menu > ul {
+    list-style: none;
+  }
+
+  #menu > ul > li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 16px;
+    text-align: center;
+    line-height: 32px;
+    position: absolute;
+  }
+
+  #li1 {
+    top: 97px;
+    left: -16px;
+    transform-origin: 128px 16px;
+  }
+
+  #li1 #inner-text {
+    animation: spin-reverse 10s infinite linear;
+  }
+
+  #li2 {
+    top: 97px;
+    left: -16px;
+    transform: rotate(45deg);
+    transform-origin: 128px 16px;
+  }
+
+  #li3 {
+    top: 97px;
+    left: -16px;
+    transform: rotate(90deg);
+    transform-origin: 128px 16px;
+  }
+
+  #li4 {
+    top: 97px;
+    left: -16px;
+    transform: rotate(135deg);
+    transform-origin: 128px 16px;
+  }
+
+  #li5 {
+    top: 97px;
+    left: -16px;
+    transform: rotate(180deg);
+    transform-origin: 128px 16px;
+  }
+
+  #li6 {
+    top: 97px;
+    left: -16px;
+    transform: rotate(225deg);
+    transform-origin: 128px 16px;
+  }
+
+  #li7 {
+    top: 97px;
+    left: -16px;
+    transform: rotate(270deg);
+    transform-origin: 128px 16px;
+  }
+
+  #li8 {
+    top: 97px;
+    left: -16px;
+    transform: rotate(315deg);
+    transform-origin: 128px 16px;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(1turn);
+    }
+  }
+</style>
+<script></script>

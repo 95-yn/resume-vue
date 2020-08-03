@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #menu {
+
+        }
+        #menu > ul {
+            position: relative;
+            list-style-type: none;
+            width: 50px;
+            height: 50px;
+            margin: 100px 200px;
+            padding: 0;
+            /*background: red;*/
+        }
+        #menu > ul > li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background: pink;
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+        }
+        @keyframes custom-rotate1 {
+            from {
+                transform: rotateZ(0) translateX(-100px) rotateZ(0);
+            }
+            50% {
+                transform: rotateZ(180deg) translateX(-100px) rotateZ(-180deg);
+            }
+            to {
+                transform: rotateZ(360deg) translateX(-100px) rotateZ(-360deg);
+            }
+        }
+        @keyframes custom-rotate2 {
+            from {
+                transform: rotateZ(45deg) translateX(-100px) rotateZ(-45deg);
+            }
+            50% {
+                transform: rotateZ(225deg) translateX(-100px) rotateZ(-225deg);
+            }
+            to {
+                transform: rotateZ(405deg) translateX(-100px) rotateZ(-405deg);
+            }
+        }
+        @keyframes custom-rotate3 {
+            from {
+                transform: rotateZ(90deg) translateX(-100px) rotateZ(-90deg);
+            }
+            50% {
+                transform: rotateZ(270deg) translateX(-100px) rotateZ(-270deg);
+            }
+            to {
+                transform: rotateZ(450deg) translateX(-100px) rotateZ(-450deg);
+            }
+        }
+        @keyframes custom-rotate4 {
+            from {
+                transform: rotateZ(135deg) translateX(-100px) rotateZ(-135deg);
+            }
+            50% {
+                transform: rotateZ(315deg) translateX(-100px) rotateZ(-315deg);
+            }
+            to {
+                transform: rotateZ(495deg) translateX(-100px) rotateZ(-495deg);
+            }
+        }
+        @keyframes custom-rotate5 {
+            from {
+                transform: rotateZ(180deg) translateX(-100px) rotateZ(-180deg);
+            }
+            50% {
+                transform: rotateZ(360deg) translateX(-100px) rotateZ(-360deg);
+            }
+            to {
+                transform: rotateZ(540deg) translateX(-100px) rotateZ(-540deg);
+            }
+        }
+        @keyframes custom-rotate6 {
+            from {
+                transform: rotateZ(225deg) translateX(-100px) rotateZ(-225deg);
+            }
+            50% {
+                transform: rotateZ(405deg) translateX(-100px) rotateZ(-405deg);
+            }
+            to {
+                transform: rotateZ(585deg) translateX(-100px) rotateZ(-585deg);
+            }
+        }
+        @keyframes custom-rotate7 {
+            from {
+                transform: rotateZ(270deg) translateX(-100px) rotateZ(-270deg);
+            }
+            50% {
+                transform: rotateZ(450deg) translateX(-100px) rotateZ(-450deg);
+            }
+            to {
+                transform: rotateZ(630deg) translateX(-100px) rotateZ(-630deg);
+            }
+        }
+        @keyframes custom-rotate8 {
+            from {
+                transform: rotateZ(315deg) translateX(-100px) rotateZ(-315deg);
+            }
+            50% {
+                transform: rotateZ(495deg) translateX(-100px) rotateZ(-495deg);
+            }
+            to {
+                transform: rotateZ(675deg) translateX(-100px) rotateZ(-675deg);
+            }
+        }
+        #menu > ul > li:nth-child(1) {
+            transform: translateX(-100px);
+            animation: custom-rotate1 5s linear infinite;
+        }
+        #menu > ul > li:nth-child(2) {
+            transform: translateX(-100px);
+            animation: custom-rotate2 5s linear infinite;
+        }
+        #menu > ul > li:nth-child(3) {
+            transform: translateX(-100px);
+            animation: custom-rotate3 5s linear infinite;
+        }
+        #menu > ul > li:nth-child(4) {
+            transform: translateX(-100px);
+            animation: custom-rotate4 5s linear infinite;
+        }
+        #menu > ul > li:nth-child(5) {
+            transform: translateX(-100px);
+            animation: custom-rotate5 5s linear infinite;
+        }
+        #menu > ul > li:nth-child(6) {
+            transform: translateX(-100px);
+            animation: custom-rotate6 5s linear infinite;
+        }
+        #menu > ul > li:nth-child(7) {
+            transform: translateX(-100px);
+            animation: custom-rotate7 5s linear infinite;
+        }
+        #menu > ul > li:nth-child(8) {
+            transform: translateX(-100px);
+            animation: custom-rotate8 5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</div>
+</body>
+</html>
