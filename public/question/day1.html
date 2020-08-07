@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dl>
+        <dt>
+            1、基本数据类型
+        </dt>
+        <dd>
+            boolean
+            undefined
+            null
+            String
+            Number
+            Symbol
+            bigint
+            Object
+        </dd>
+    </dl>
+    <dl>
+        <dt>
+            function test(person) {
+                person.age = 26
+                person = {
+                  name: 'hzj',
+                  age: 18
+                }
+                return person
+              }
+              const p1 = {
+                name: 'fyq',
+                age: 19
+              }
+              const p2 = test(p1)
+              console.log(p1) // -> ?
+              console.log(p2) // -> ?
+        </dt>
+        <dd>
+            fyq 26
+            hzj 19
+
+        </dd>
+    </dl>
+
+    <dl>
+        <dt>
+            闭包
+        </dt>
+        <dd>
+            函数和对其周围状态（词法环境）的引用捆绑在一起构成闭包
+        </dd>
+    </dl>
+    <script>
+        
+    </script>
+    
+</body>
+</html>
