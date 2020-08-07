@@ -51,32 +51,40 @@
         </ul>
     </div>
     <script>
-        let children = document.getElementsByTagName('li');
-        let radius = 200;
-        let avd = 360/children.length;
-        console.log(avd);
-        let ahd = avd*Math.PI /180;
-        console.log(avd*Math.PI);
-        children = Array.from(children);
-        console.log(children);
-        let c = 0
-        function next() {
-            c += .02;
-            requestAnimationFrame(function () {
-                requestAnimationFrame(function () {
-                    children.forEach((v,i) => {
-                        let top = `${Math.sin((ahd*i+c))*radius}px`;
-                        console.log(Math.cos((ahd*i)));
-                        let left = `${Math.cos((ahd*i+c))*radius}px`;
-                        v.style = `transform:translate(${left}, ${top})`;
-                    });
+        // let children = document.getElementsByTagName('li');
+        // let radius = 200;
+        // let avd = 360/children.length;
+        // console.log(avd);
+        // let ahd = avd*Math.PI /180;
+        // console.log(avd*Math.PI);
+        // children = Array.from(children);
+        // console.log(children);
+        // let c = 0
+        // function next() {
+        //     c += .02;
+        //     requestAnimationFrame(function () {
+        //         requestAnimationFrame(function () {
+        //             children.forEach((v,i) => {
+        //                 let top = `${Math.sin((ahd*i+c))*radius}px`;
+        //                 console.log(Math.cos((ahd*i)));
+        //                 let left = `${Math.cos((ahd*i+c))*radius}px`;
+        //                 v.style = `transform:translate(${left}, ${top})`;
+        //             });
                     
-                });
-            })
-            setTimeout(next,100);
+        //         });
+        //     })
+        //     setTimeout(next,100);
            
+        // }
+        // next()
+
+        function a() {
+            let b = '123';
+            return function() {
+                return b;
+            }
         }
-        next()
+        let f = a();
     </script>
    
 </body>
