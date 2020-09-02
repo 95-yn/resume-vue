@@ -36,7 +36,7 @@ export default {
         sendError() {
       this.test.b = 2323;
       console.log(this.test);
-      alert(aaaaaaaaaaaaa);
+      console.log(aaaaaaaaaaaaa);
       this.$forceUpdate();  
         }
     },
