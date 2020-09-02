@@ -13,3 +13,18 @@ content-type: application/json
     "name": "sample",
     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
+###
+
+POST https://github.com/login/oauth/access_token/?code=04d00d98017724984061&state=abc123&client_secret=20a18df87c1e2799ee8a233b213f4a62796e59b6&client_id=Iv1.3703954276de6dfe&redirect_uri=http%3A%2F%2Flocalhost%3A8080 HTTP/1.1
+content-type: application/json
+
+{
+    "code": "04d00d98017724984061",
+    "state": "abc123",
+    "client_secret": "20a18df87c1e2799ee8a233b213f4a62796e59b6",
+    "client_id": "Iv1.3703954276de6dfe",
+    "redirect_uri": "http%3A%2F%2Flocalhost%3A8080"
+}
+###
+GET https://api.github.com/user HTTP/1.1
+Authorization: token f49f1633d56a049dad628897def5d26d90172c79

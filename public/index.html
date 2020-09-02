@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>表单设计器kcz</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="http://unpkg.com/k-form-design/lib/k-form-design.css">
 </head>
+
 <body>
-    
+  <div class="app">
+    <k-form-build ref="KFB" @submit="handleSubmit" :value="jsonData"></k-form-build>
+    <button @click="getData">提交</button>
+  </div>
+  <script src="http://cdn.kcz66.com/vue.min.js"></script>
+  <script src="http://unpkg.com/k-form-design/lib/k-form-design.umd.min.js"></script>
+  <script>
+    let jsonData = {"list":[{"type":"input","label":"输入框","options":{"type":"text","width":"100%","defaultValue":"","placeholder":"请输入","clearable":false,"maxLength":null,"hidden":false,"disabled":false},"model":"input_1597395736106","key":"input_1597395736106","rules":[{"required":false,"message":"必填项"}]},{"type":"input","label":"输入框","options":{"type":"text","width":"100%","defaultValue":"","placeholder":"请输入","clearable":false,"maxLength":null,"hidden":false,"disabled":false},"model":"input_1597395737378","key":"input_1597395737378","rules":[{"required":false,"message":"必填项"}]},{"type":"textarea","label":"文本框","icon":"icon-edit","options":{"width":"100%","minRows":4,"maxRows":6,"maxLength":null,"defaultValue":"","clearable":false,"hidden":false,"disabled":false,"placeholder":"请输入"},"model":"textarea_1597395745000","key":"textarea_1597395745000","rules":[{"required":false,"message":"必填项"}]},{"type":"switch","label":"开关","icon":"icon-kaiguan3","options":{"defaultValue":false,"hidden":false,"disabled":true},"model":"switch_1597395766391","key":"switch_1597395766391","rules":[{"required":false,"message":"必填项"}]},{"type":"text","label":"文字","icon":"icon-zihao","options":{"textAlign":"left","hidden":false,"showRequiredMark":false},"key":"text_1597395796058"},{"type":"divider","label":"分割线","icon":"icon-fengexian","options":{"orientation":"left"},"key":"divider_1597395797767"},{"type":"card","label":"卡片布局","icon":"icon-qiapian","list":[],"key":"card_1597395798856"},{"type":"table","label":"表格布局","icon":"icon-biaoge","trs":[{"tds":[{"colspan":1,"rowspan":1,"list":[]},{"colspan":1,"rowspan":1,"list":[]}]},{"tds":[{"colspan":1,"rowspan":1,"list":[]},{"colspan":1,"rowspan":1,"list":[]}]}],"options":{"width":"100%","bordered":true,"bright":false,"small":true,"customStyle":""},"key":"table_1597395799651"},{"type":"grid","label":"栅格布局","icon":"icon-zhage","columns":[{"span":12,"list":[]},{"span":12,"list":[]}],"options":{"gutter":0},"key":"grid_1597395800202"},{"type":"button","label":"按钮","icon":"icon-button-remove","options":{"type":"primary","handle":"submit","dynamicFun":"","hidden":false,"disabled":false},"key":"button_1597395801297"},{"type":"editor","label":"富文本","icon":"icon-LC_icon_edit_line_1","list":[],"options":{"height":300,"placeholder":"请输入","defaultValue":"","chinesization":true,"hidden":false,"disabled":false,"showLabel":false,"width":"100%"},"model":"editor_1597395806114","key":"editor_1597395806114","rules":[{"required":false,"message":"必填项"}]},{"type":"batch","label":"动态表格","icon":"icon-biaoge","list":[],"options":{"scrollY":0,"disabled":false,"hidden":false,"showLabel":false,"hideSequence":false,"width":"100%"},"model":"batch_1597395806553","key":"batch_1597395806553"},{"type":"textarea","label":"文本框","icon":"icon-edit","options":{"width":"100%","minRows":4,"maxRows":6,"maxLength":null,"defaultValue":"","clearable":false,"hidden":false,"disabled":false,"placeholder":"请输入"},"model":"textarea_1597395809055","key":"textarea_1597395809055","rules":[{"required":false,"message":"必填项"}]},{"type":"switch","label":"开关","icon":"icon-kaiguan3","options":{"defaultValue":false,"hidden":false,"disabled":false},"model":"switch_1597395801814","key":"switch_1597395801814","rules":[{"required":false,"message":"必填项"}]},{"type":"button","label":"按钮","icon":"icon-button-remove","options":{"type":"primary","handle":"submit","dynamicFun":"","hidden":false,"disabled":false},"key":"button_1597395802290"},{"type":"editor","label":"富文本","icon":"icon-LC_icon_edit_line_1","list":[],"options":{"height":300,"placeholder":"请输入","defaultValue":"","chinesization":true,"hidden":false,"disabled":false,"showLabel":false,"width":"100%"},"model":"editor_1597395757782","key":"editor_1597395757782","rules":[{"required":false,"message":"必填项"}]}],"config":{"layout":"vertical","labelCol":{"span":8},"wrapperCol":{"span":16},"hideRequiredMark":false,"customStyle":""}}
+    let vm = new Vue({
+      el: '.app',
+      data: {
+        jsonData
+      },
+      methods: {
+        handleSubmit(p) {
+          // 通过表单提交按钮触发，获取promise对象
+          p().then(res => {
+            // 获取数据成功
+            alert(JSON.stringify(res))
+          })
+            .catch(err => {
+              console.log(err, '校验失败')
+            })
+        },
+        getData() {
+          // 通过函数获取数据
+          this.$refs.KFB.getData().then(res => {
+            // 获取数据成功
+            alert(JSON.stringify(res))
+          })
+            .catch(err => {
+              console.log(err, '校验失败')
+            })
+        }
+      }
+    })
+  </script>
 </body>
+
 </html>
