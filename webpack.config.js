@@ -82,7 +82,7 @@ module.exports = {
             project: 'vue',
             apiKey: '0258108c4ae74cc7b48ac89c6a843c682c9242cbbeca4547a9d2585659532bc7',
             baseSentryURL: 'http://106.52.205.41:9000/api/0',
-            urlPrefix: '~/resume/',
+            // urlPrefix: '~/resume/',
             // Release version name/hash is required
             release: 1.0
           })
