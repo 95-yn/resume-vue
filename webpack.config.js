@@ -84,7 +84,7 @@ module.exports = {
             baseSentryURL: 'http://106.52.205.41:9000/api/0',
             deleteAfterCompile: true,
             // Release version name/hash is required
-            release: 1.0
+            release: '1.0'
           })
     ],
     resolve: {
