@@ -94,7 +94,7 @@ module.exports = {
         ]
     },
     mode: 'production',
-    devtool: "source-map",
+    devtool: "cheap-module-source-map",
     devServer: {
         // 配置host及端口
         host: '127.0.0.1',
