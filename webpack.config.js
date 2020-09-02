@@ -2,6 +2,8 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const SentryPlugin = require('@sentry/webpack-plugin');
+var SentryPlugin = require('webpack-sentry-plugin');
 module.exports = {
     entry: path.join(__dirname, 'src/main.js'),
     output: {
@@ -67,7 +69,23 @@ module.exports = {
             template: 'index.html', // 指定用index.html做模版
             inject: 'body' // 指定插入的<script>标签在body底部
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        // new SentryPlugin({
+        //     release: '1.0',
+        //     include: './dist/js',
+        //     // urlPrefix: '~/dist/',
+        //     ignore: ['node_modules', 'webpack.config.js'],
+        // }),
+        new SentryPlugin({
+            // Sentry options are required
+            organization: 'sentry',
+            project: 'vue',
+            apiKey: '0258108c4ae74cc7b48ac89c6a843c682c9242cbbeca4547a9d2585659532bc7',
+            baseSentryURL: 'http://106.52.205.41:9000/api/0',
+            deleteAfterCompile: true,
+            // Release version name/hash is required
+            release: 1.0
+          })
     ],
     resolve: {
         // 以下配置会将没指定拓展名的文件按如下类型查找匹配
@@ -75,8 +93,8 @@ module.exports = {
             '.js', '.json', '.vue'
         ]
     },
-    mode: 'development',
-    // devtool: "source-map",
+    mode: 'production',
+    devtool: "source-map",
     devServer: {
         // 配置host及端口
         host: '127.0.0.1',
