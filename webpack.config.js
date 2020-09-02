@@ -84,7 +84,7 @@ module.exports = {
             baseSentryURL: 'http://106.52.205.41:9000/api/0',
             // urlPrefix: '~/resume/',
             // Release version name/hash is required
-            release: 1.0
+            release: 'test-1.0'
           })
     ],
     resolve: {
