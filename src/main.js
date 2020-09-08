@@ -13,7 +13,7 @@ console.log(config);
 // process.env.NODE_ENV === "production" &&
 Sentry.init({
   dsn: config.sentryDsn,
-  release: 'test-1.0.2',
+  release: 'test-1.0.3',
   integrations: [new VueIntegration({Vue, attachProps: true})],
 });
 
