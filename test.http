@@ -2,16 +2,16 @@ GET https://example.com/comments/1 HTTP/1.1
 
 ###
 
-GET https://example.com/topics/1 HTTP/1.1
+GET https://test-elearning.csair.com/api/v1/course-study/rank-study/cached?organizationId=387c8b08-8704-428d-bf8d-d7600ab7f2e0&page=1&pageSize=7&orderBy=0&type=0,2HTTP/1.1
 
 ###
 
-POST https://example.com/comments HTTP/1.1
+GET https://test-elearning.csair.com/api/v1/training/lecturer/app/teach-statistic HTTP/1.1
 content-type: application/json
 
 {
-    "name": "sample",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+    "page": "1",
+    "pageSize": "100"
 }
 ###
 
@@ -28,3 +28,29 @@ content-type: application/json
 ###
 GET https://api.github.com/user HTTP/1.1
 Authorization: token f49f1633d56a049dad628897def5d26d90172c79
+
+
+###
+POST https://test-elearning.csair.com/oauth/api/v1/app-login HTTP/1.1
+Accept: application/json, text/plain, */*
+Content-Type: application/x-www-form-urlencoded
+Cookie: p_h5_u=B185CA11-491E-43F4-8245-6C0A1EA368C0; Hm_lvt_64997e51297683c4a109b5fde52308f1=1594203562,1594954608; _ga=GA1.1.1573367723.1598097584
+Host: 127.0.0.1:8082
+Origin: http://127.0.0.1:8082
+Referer: http://127.0.0.1:8082/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+X-Requested-With: XMLHttpRequest
+
+{
+    "username": "PjDD8fU4asbLJXaEbcNEwg==",
+    "company_name": "LNaECwGpy0p+//z6/dJLF8Z9JhDGh6HYqhJqEgN9tck=",
+    "pword": "6kKyoAA2hrPjBssMSIWmog==",
+    "login_method": "JZNm+1f9txtGtiE0oRMJ1g==",
+    "client_id": "YcGF5XbmwTJg/gOlbonUnA==",
+    "displayDynamic": "v7FGDLd53KbwggK72NbuPg==",
+    "terminal": "aAtweW+Syfn5AH3aD6ThtA==",
+    "system": "3I0zO1OjTuCa3dNUya6w3w==",
+    "captcha": ""
+}
