@@ -2,8 +2,8 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const SentryPlugin = require('@sentry/webpack-plugin');
-var SentryPlugin = require('webpack-sentry-plugin');
+const SentryPlugin = require('@sentry/webpack-plugin');
+// var SentryPlugin = require('webpack-sentry-plugin');
 module.exports = {
     entry: path.join(__dirname, 'src/main.js'),
     output: {
@@ -70,12 +70,12 @@ module.exports = {
             inject: 'body' // 指定插入的<script>标签在body底部
         }),
         new CleanWebpackPlugin(),
-        // new SentryPlugin({
-        //     release: '1.0',
-        //     include: './dist/js',
-        //     // urlPrefix: '~/dist/',
-        //     ignore: ['node_modules', 'webpack.config.js'],
-        // }),
+        new SentryPlugin({
+            release: '1.0.3',
+            include: './dist/js',
+            urlPrefix: '~/resume/',
+            ignore: ['node_modules', 'webpack.config.js'],
+        }),
         // new SentryPlugin({
         //     // Sentry options are required
         //     organization: 'sentry',
@@ -93,8 +93,8 @@ module.exports = {
             '.js', '.json', '.vue'
         ]
     },
-    mode: 'production',
-    // devtool: "source-map",
+    mode: 'none',
+    devtool: "source-map",
     devServer: {
         // 配置host及端口
         host: '127.0.0.1',
