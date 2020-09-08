@@ -72,7 +72,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new SentryPlugin({
             release: '1.0.3',
-            include: './dist/js',
+            // include: './dist/js',
             // urlPrefix: '~/resume/',
             ignore: ['node_modules', 'webpack.config.js'],
         }),
