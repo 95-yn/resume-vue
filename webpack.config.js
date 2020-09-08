@@ -76,16 +76,16 @@ module.exports = {
         //     // urlPrefix: '~/dist/',
         //     ignore: ['node_modules', 'webpack.config.js'],
         // }),
-        new SentryPlugin({
-            // Sentry options are required
-            organization: 'sentry',
-            project: 'vue',
-            apiKey: '0258108c4ae74cc7b48ac89c6a843c682c9242cbbeca4547a9d2585659532bc7',
-            baseSentryURL: 'http://106.52.205.41:9000/api/0',
-            // urlPrefix: './js',
-            // Release version name/hash is required
-            release: 'test-1.0.3'
-          })
+        // new SentryPlugin({
+        //     // Sentry options are required
+        //     organization: 'sentry',
+        //     project: 'vue',
+        //     apiKey: '0258108c4ae74cc7b48ac89c6a843c682c9242cbbeca4547a9d2585659532bc7',
+        //     baseSentryURL: 'http://106.52.205.41:9000/api/0',
+        //     // urlPrefix: './js',
+        //     // Release version name/hash is required
+        //     release: 'test-1.0.3'
+        //   })
     ],
     resolve: {
         // 以下配置会将没指定拓展名的文件按如下类型查找匹配
