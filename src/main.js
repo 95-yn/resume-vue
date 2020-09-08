@@ -15,7 +15,7 @@ console.log(config);
 // process.env.NODE_ENV === "production" &&
 Sentry.init({
   dsn: config.sentryDsn,
-  release: 'test-0.0.1',
+  release: '0.0.2',
   // release: 'test-1.0.3',
   // release: 'test@1.0.2',
   logErrors: true,
