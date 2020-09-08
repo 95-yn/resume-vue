@@ -10,7 +10,7 @@ import './assets/styles/main.scss';
 import {config} from './config/index.js'
 // const release = 'test-0.0.1'
 console.log(config);
-process.env.RELEASE_VERSION = release;
+// process.env.RELEASE_VERSION = release;
 
 // process.env.NODE_ENV === "production" &&
 Sentry.init({
