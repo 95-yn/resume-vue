@@ -72,7 +72,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new SentryPlugin({
             include: "./dist", // 作用的文件夹
-            release: '0.0.1', // 一致的版本号
+            release: 'test-0.0.1', // 一致的版本号
             configFile: "sentry.properties", // 不用改
             urlPrefix: '~/js', // js 文件相对于域名的位置
             ignore: ['node_modules', 'webpack.config.js'],
