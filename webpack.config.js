@@ -93,7 +93,7 @@ module.exports = {
             '.js', '.json', '.vue'
         ]
     },
-    mode: 'none',
+    mode: 'production',
     devtool: "source-map",
     devServer: {
         // 配置host及端口
